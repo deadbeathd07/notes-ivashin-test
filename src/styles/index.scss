@@ -1,0 +1,199 @@
+@import "./reset";
+@import "./fonts";
+@import "./vars";
+@import "./global";
+
+.title {
+  &__title-box {
+    @extend %default-border;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: 50px 0 30px;
+    padding: 20px 30px;
+    transition: 0.5s;
+    &:hover {
+      @extend %default-border-hover;
+    }
+  }
+  &__text {
+    @extend %default-text-title;
+    position: relative;
+    width: fit-content;
+    padding-top: 10px;
+    padding-left: 30px;
+    &:before {
+      content: "\00A1";
+      position: absolute;
+      font-size: 6rem;
+      top: 0;
+      left: 0;
+      color: $color-contrast;
+    }
+  }
+}
+
+.search {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 0 30px;
+  background: linear-gradient(90deg, $color-dark 0%, transparent 100%);
+  height: 60px;
+  &__form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__input {
+    width: 100%;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    color: $color-text;
+    &::placeholder {
+      color: $color-text;
+    }
+  }
+}
+
+.notes {
+  min-width: 50%;
+  max-width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__creator {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @extend %default-border;
+    transition: 0.5s;
+    &:hover {
+      @extend %default-border-hover;
+    }
+  }
+}
+
+.note {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 10px 30px;
+  background: linear-gradient(
+    90deg,
+    $color-dark 0%,
+    transparent 50%,
+    $color-medium 100%
+  );
+  background-size: 200%;
+  background-position: 100% 0;
+  transition: 1s;
+  &__teg {
+    @extend %default-subtitle;
+    &::before {
+      content: "#";
+    }
+  }
+  &__text {
+    cursor: pointer;
+  }
+  &__text-teg {
+    color: $color-contrast;
+  }
+  &__input {
+    border: none;
+    outline: none;
+    background-color: inherit;
+    color: $color-contrast;
+  }
+  &__icons-box {
+    width: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:hover {
+    transform: skew(-10deg);
+    background-position: 0 0;
+  }
+  &_complete {
+    background-position: 0 0;
+    .note {
+      &__teg,
+      &__text-teg {
+        color: rgba($color-text, 0.5);
+      }
+      &__text {
+        font-style: italic;
+        text-decoration: line-through;
+        color: rgba($color-text, 0.5);
+      }
+    }
+    .button__icon {
+      color: rgba($color-text, 0.5);
+      &:hover {
+        color: rgba($color-contrast, 0.5);
+      }
+    }
+  }
+}
+
+.new-note {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 30px;
+  background: linear-gradient(90deg, $color-dark 0%, transparent 100%);
+  &__form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__input {
+    flex: 1;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    color: $color-text;
+    &::placeholder {
+      color: $color-text;
+    }
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  cursor: pointer;
+  &__icon {
+    font-size: 2rem;
+    transition: 0.3s;
+    &:hover {
+      color: $color-contrast;
+    }
+  }
+}
+
+.info {
+  font-family: "Bebas Neue", cursive;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  color: $color-contrast;
+}

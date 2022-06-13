@@ -1,0 +1,24 @@
+{
+  "title": "Notes",
+  "notes": [
+    {
+      "id": "jbch",
+      "teg": "home",
+      "title": "wash the dish #home",
+      "isEdit": false
+    },
+    {
+      "id": "ywkq",
+      "teg": "",
+      "title": "cleaning flore",
+      "isEdit": false
+    },
+    {
+      "id": "ybnp",
+      "teg": "shop",
+      "title": "to buy some milk #shop",
+      "isEdit": false
+    }
+  ],
+  "info": "Lebedevich AV, 2022"
+}

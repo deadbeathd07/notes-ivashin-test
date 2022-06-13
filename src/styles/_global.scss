@@ -1,0 +1,45 @@
+@import "vars.scss";
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-width: 350px;
+}
+
+#root {
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  @extend %default-background;
+  @extend %default-text;
+}
+
+.header,
+.main,
+.footer {
+  &__inner {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}

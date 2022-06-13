@@ -1,0 +1,41 @@
+$color-text: #1d3557;
+$color-light: #f1faee;
+$color-medium: #a8dadc;
+$color-dark: #457b9d;
+$color-contrast: #e63946;
+
+%default-background {
+  background-color: $color-light;
+}
+
+%default-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: $color-text;
+}
+
+%default-text-title {
+  font-family: "Bebas Neue", cursive;
+  font-size: 5rem;
+  color: $color-dark;
+  text-align: center;
+}
+
+%default-subtitle {
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: italic;
+  color: $color-dark;
+}
+
+%default-border {
+  border: 10px solid transparent;
+  border-image: linear-gradient(to right, $color-medium 0%, transparent 100%);
+  border-image-slice: 1;
+}
+
+%default-border-hover {
+  border-image: linear-gradient(to left, $color-dark 0%, transparent 100%);
+  border-image-slice: 1;
+}
