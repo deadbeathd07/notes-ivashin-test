@@ -4,19 +4,19 @@
     {
       "id": "jbch",
       "teg": "home",
-      "title": "wash the dish #home",
+      "title": "wash the dishes #home",
       "isEdit": false
     },
     {
       "id": "ywkq",
       "teg": "",
-      "title": "cleaning flore",
+      "title": "wash the floor",
       "isEdit": false
     },
     {
       "id": "ybnp",
       "teg": "shop",
-      "title": "to buy some milk #shop",
+      "title": "buy some milk #shop",
       "isEdit": false
     }
   ],
